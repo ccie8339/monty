@@ -23,6 +23,9 @@ for y in range(0,numGames):
         currentDeck.append(tempDeck[cardNum])
         del tempDeck[cardNum]
     pickedCard = currentDeck[random.randint(0,2)]
+    # This is cheap honestly, the host would always open a losing door, meaning
+    # The 2 doors remain are 1 winner and 1 loser. Since you always switch
+    # If you picked the winner originally, you will not lose, and vice versa.
     if pickedCard == "W":
         losses += 1
     else:
